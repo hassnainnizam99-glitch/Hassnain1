@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(rgb(35,35,204));
+    font-family: Arial, sans-serif;
+}
+
+/* Happy New Year Animation */
+#newYear{
+    position:fixed;           /* page ke upar appear ho */
+    top:50%;                   /* vertical center */
+    left:50%;                  /* horizontal center */
+    transform:translate(-50%,-50%) scale(0.5);
+    font-size:60px;
+    font-weight:800;
+    color:#fff;
+    text-align:center;
+    opacity:0;
+    z-index:9999;              /* content ke upar */
+    text-shadow:0 0 20px #fff, 0 0 40px #ffd700, 0 0 60px #ff00ff;
+    animation:showText 2s forwards;
+}
+
+@keyframes showText{
+    0%{opacity:0; transform:translate(-50%,-50%) scale(0.5);}
+    50%{opacity:1; transform:translate(-50%,-50%) scale(1.2);}
+    100%{opacity:1; transform:translate(-50%,-50%) scale(1);}
+}
+
+/* NAVBAR */
+.navbar{
+    background:#0a6cf1;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.OPD{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.menu{
+    font-size:18px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    position:relative;
+    padding:6px 0;
+}
+
+.navbar a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:100%;
+    height:2px;
+    background:white;
+    transform:scaleX(0);
+    transition:0.4s;
+}
+
+.navbar a:hover::after{
+    transform:scaleX(1);
+}
+
+/* SLIDER */
+.Slider{
+    width:100%;
+    height:560px;
+    background:url(pi.jpg);
+    background-size:cover;
+    background-position:center;
+    animation:slide 12s infinite;
+}
+
+@keyframes slide{
+    25%{background:url(tal.jpg);}
+    50%{background:url(pi.jpg);}
+    75%{background:url(s.jpg);}
+}
+
+.doctor-div{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin:50px 0;
+}
+
+.doctor-info{
+    width:330px;
+    background:white;
+    border-radius:4px;
+    overflow:hidden;
+    box-shadow:0 4px 20px rgba(0,0,0,0.2);
+    transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.doctor-info img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.doctor-info .name{
+    background:#1e00ff;
+    color:white;
+    padding:12px;
+    font-size:20px;
+    font-weight:600;
+    text-decoration: none;
+}
+
+.doctor-info:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 35px rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+.footer{
+    background:#0a6cf1;
+    color:white;
+}
+
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:40px 20px;
+}
+
+.footer-box{
+    width:30%;
+    min-width:220px;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:8px;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:15px;
+    background:#084fc1;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+    display:flex;
+    margin-top:12px;
+}
+
+.social-icons a{
+    color:white;
+    font-size:22px;
+    margin-right:15px;
+    transition:0.3s;
+}
+
+.social-icons a.tiktok:hover{ color:#000000; }
+.social-icons a.youtube:hover{ color:#ff0000; }
+.social-icons a.x:hover{ color:#000000; }
+
+.social-icons a:hover{
+    transform:scale(1.15);
+    text-shadow:0 0 6px currentColor;
+}
+
+
+/* MOBILE */
+@media(max-width:768px){
+    .navbar{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .menu a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .Slider{
+        height:300px;
+    }
+
+    .footer-box{
+        width:100%;
+        margin-bottom:20px;
+    }
+}
+
+/* WhatsApp Floating Button with Bounce Animation */
+.whatsapp-float{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    
+    /* 🔥 Animation */
+    animation: bounce 2s infinite;
+}
+
+/* Hover color */
+.whatsapp-float:hover{
+    background-color: #1ebe5d;
+}
+
+/* 🔥 Bounce keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-14px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}

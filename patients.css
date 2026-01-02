@@ -1,0 +1,256 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(rgb(35,35,204));
+    font-family: Arial, sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#0a6cf1;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.OPD{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+}
+
+.menu{
+    font-size:18px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    position:relative;
+    padding:6px 0;
+}
+
+.navbar a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:100%;
+    height:2px;
+    background:white;
+    transform:scaleX(0);
+    transition:0.4s;
+}
+
+.navbar a:hover::after{
+    transform:scaleX(1);
+}
+
+.patient-section{
+    background:#1f2bd8;
+    padding:60px 40px;
+}
+
+.patient-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+.patient-content{
+    color:#fff;
+}
+
+.patient-content h2{
+    font-size:36px;
+    margin-bottom:20px;
+}
+
+.patient-content p{
+    font-size:16px;
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.patient-features{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+    margin-bottom:30px;
+}
+
+.feature{
+    font-size:15px;
+}
+
+.patient-buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:12px 24px;
+    border-radius:6px;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.primary{
+    background:#00c853;
+    color:#fff;
+}
+
+.secondary{
+    background:#fff;
+    color:#1f2bd8;
+}
+
+/* Responsive */
+@media(max-width:768px){
+    .patient-container{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .patient-image img{
+        width:100%;
+    }
+
+    .patient-features{
+        grid-template-columns:1fr;
+    }
+
+    .patient-buttons{
+        justify-content:center;
+    }
+}
+
+
+/* FOOTER */
+.footer{
+    background:#0a6cf1;
+    color:white;
+}
+
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:40px 20px;
+}
+
+.footer-box{
+    width:30%;
+    min-width:220px;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:8px;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:15px;
+    background:#084fc1;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+    display:flex;
+    margin-top:12px;
+}
+
+.social-icons a{
+    color:white;
+    font-size:22px;
+    margin-right:15px;
+    transition:0.3s;
+}
+
+.social-icons a.tiktok:hover{ color:#000000; }
+.social-icons a.youtube:hover{ color:#ff0000; }
+.social-icons a.x:hover{ color:#000000; }
+
+.social-icons a:hover{
+    transform:scale(1.15);
+    text-shadow:0 0 6px currentColor;
+}
+
+
+/* MOBILE */
+@media(max-width:768px){
+    .navbar{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .menu a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .Slider{
+        height:300px;
+    }
+
+    .footer-box{
+        width:100%;
+        margin-bottom:20px;
+    }
+}
+
+/* WhatsApp Floating Button with Bounce Animation */
+.whatsapp-float{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    
+    /* 🔥 Animation */
+    animation: bounce 2s infinite;
+}
+
+/* Hover color */
+.whatsapp-float:hover{
+    background-color: #1ebe5d;
+}
+
+/* 🔥 Bounce keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-14px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}

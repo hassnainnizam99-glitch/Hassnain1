@@ -1,0 +1,258 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(rgb(35,35,204));
+    margin:0;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.navbar{
+    background-color:#0a6cf1;
+    padding:12px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+nav{
+    font-size:22px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+ .OPD{
+    color:white;
+    font-size:22px;
+    font-weight:bold;
+}
+.navbar a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-size:20px;
+    position:relative;
+    padding:6px 0;
+}
+
+.navbar a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-3px;
+    width:100%;
+    height:2px;
+    background:white;
+    transform:scaleX(0);
+    transform-origin:center;
+    transition:transform 0.5s ease;
+}
+
+.navbar a:hover::after{
+    transform:scaleX(1);
+}
+
+.team-section{
+    max-width:1100px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+.row{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    margin-bottom:50px;
+}
+
+.left img{
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+.right h2,
+.right h4{
+    color:#ffffff;
+}
+
+.right h4{
+    margin:8px 0;
+}
+
+.right p{
+    font-size:16px;
+    line-height:1.6;
+    color:#ffffff;
+}
+
+.last-para{
+    margin-top:40px;
+    padding:20px;
+    background:#f4f7ff;
+    border-left:5px solid #0a6cf1;
+}
+
+.last-para p{
+    font-size:16px;
+    line-height:1.7;
+    color:#000;
+}
+
+.about-container{
+    background-color:#ffffff;
+    max-width:900px;
+    margin:40px auto;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+.about-container h1{
+    text-align:center;
+    color:#1a52c4;
+    margin-bottom:15px;
+}
+
+.about-container p{
+    font-size:17px;
+    line-height:1.7;
+    color:#000;
+    margin-bottom:15px;
+}
+
+.footer{
+    background:#0a6cf1;
+    color:white;
+    margin-top:40px;
+}
+
+.footer-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    padding:40px 20px;
+}
+
+.footer-box{
+    width:30%;
+    min-width:220px;
+}
+
+.footer-box h3,
+.footer-box h4{
+    margin-bottom:15px;
+}
+
+.footer-box a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+.footer-box a:hover{
+    text-decoration:underline;
+}
+
+.footer-bottom{
+    text-align:center;
+    padding:15px;
+    background:#084fc1;
+    font-size:14px;
+}
+
+.contact{
+    display:flex;
+    flex-direction:column;
+}
+
+/* SOCIAL ICONS */
+.social-icons{
+    display:flex;
+    margin-top:12px;
+}
+
+.social-icons a{
+    color:white;
+    font-size:22px;
+    margin-right:15px;
+    transition:0.3s;
+}
+
+.social-icons a.tiktok:hover{ color:#000000; }
+.social-icons a.youtube:hover{ color:#ff0000; }
+.social-icons a.x:hover{ color:#000000; }
+
+.social-icons a:hover{
+    transform:scale(1.15);
+    text-shadow:0 0 6px currentColor;
+}
+
+
+@media(max-width:768px){
+    .row{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    .left img{
+        width:200px;
+        height:200px;
+    }
+
+    .footer-box{
+        width:100%;
+        margin-bottom:25px;
+    }
+}
+
+
+/* WhatsApp Floating Button with Bounce Animation */
+.whatsapp-float{
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 32px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: 0.3s;
+    
+    /* 🔥 Animation */
+    animation: bounce 2s infinite;
+}
+
+/* Hover color */
+.whatsapp-float:hover{
+    background-color: #1ebe5d;
+}
+
+/* 🔥 Bounce keyframes */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-14px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}
